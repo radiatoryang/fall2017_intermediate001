@@ -1,2 +1,5 @@
 */Library/*
 */Builds/*
+*.csproj
+*.sln
+*/Temp/*
