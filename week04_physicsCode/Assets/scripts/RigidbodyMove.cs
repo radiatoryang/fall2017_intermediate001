@@ -39,6 +39,7 @@ public class RigidbodyMove : MonoBehaviour {
 		myRigidbody.AddRelativeForce( inputVector * 25f );
 
 		Debug.Log("my velocity: " + myRigidbody.velocity.ToString() );
+		Debug.Log( "my speed: " + myRigidbody.velocity.magnitude.ToString() );
 	}
 
 
