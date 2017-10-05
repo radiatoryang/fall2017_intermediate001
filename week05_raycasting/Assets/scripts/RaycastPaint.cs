@@ -23,6 +23,12 @@ public class RaycastPaint : MonoBehaviour {
 		// STEP 4: let's shoot our Raycast
 		if( Physics.Raycast( myRay, out myRayHit, maxRayDistance ) ) {
 			myPrefab.position = myRayHit.point; // "point" is the world position where it hit
+
+			// make a new copy of this sphere wherever my raycast hit something
+			if( Input.GetMouseButton( 0 ) ) {
+				Instantiate( myPrefab, myRayHit.point, Quaternion.Euler( 0f, 0f, 0f ) );
+			}
+
 		}
 	}
 }
